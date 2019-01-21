@@ -1,0 +1,55 @@
+"""
+this module doc string......
+
+"""
+
+class car:
+    """
+    This is car class representing real world obect
+    c = car('honda')
+    c.start()
+
+    """
+
+    counter = 0
+
+    def __init__ (self, name, model=2018):
+        """
+        this is initilizer
+        parm: name, model=2018
+        """
+
+        self.name = name
+        self.model = model
+        self.status = 'stop'
+        self.type = None
+        car.counter += 1
+
+    def start(self): 
+       """
+       change status of car object to start
+       """
+
+    def stop(self):
+       """
+       change status of car object to stop
+       """
+       self.status = 'stop'
+
+
+
+c = car('honda')
+print(c.counter)
+y = car('yamaha')
+print(c.counter)
+print(y.counter)
+c.counter += 5
+print(c.counter)
+print(y.counter)
+s = car('suziki')
+print(s.counter)
+print(c.counter)
+print(y.counter)
+print(c.__dict__)
+print(y.__dict__)
+print(s.__dict__)
